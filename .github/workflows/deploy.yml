@@ -26,8 +26,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages  # <-- Questo blocco era indentato male
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: dist
+          token: ${{ secrets.GH_PAGES_DEPLOY }}
